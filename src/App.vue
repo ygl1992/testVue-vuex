@@ -1,17 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <p>
-      <router-link to="/">Home</router-link>|
-      <router-link to="/params/198/javascript权威指南">Params</router-link>|
-      <router-link to="/goHome">goHome</router-link>|
-      <router-link to="/Hi1">Hi1</router-link>|
-      <router-link to="/xiaopang">xiaopang</router-link>|
-    </p>
-
-    <transition name="fade" mode="out-in">
-      <router-view/>
-    </transition>
+    <router-view/>
+    <i class="icon iconfont icon-gongnengjianyi"></i>
   </div>
 </template>
 
