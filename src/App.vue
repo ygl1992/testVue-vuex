@@ -1,20 +1,18 @@
 <template>
   <div id="app">
-    <router-view/>
-    <i class="icon iconfont icon-gongnengjianyi"></i>
+    <leftNav></leftNav>
+    <div class="main">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+import leftNav from '@/components/common/leftNav'
 export default {
   name: 'app',
-  methods: {
-    goback () {
-      this.$router.go(-1)
-    },
-    goHome () {
-      this.$router.push('/')
-    }
+  components: {
+    leftNav
   }
 }
 </script>
@@ -26,7 +24,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.main{
+  float: left;
+  width: 95%;
+  background-color: #eff2f7;
+  height: 100%;
+  overflow: auto;
 }
 .fade-enter{
   opacity: 0;
